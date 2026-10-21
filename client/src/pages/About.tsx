@@ -37,7 +37,7 @@ export default function About() {
       <PageHero
         index="01"
         section="About"
-        eyebrow="Steeltech Industries / Since 1995"
+        eyebrow="SteelTech Industries / Since 1995"
         title={
           <>
             Three decades
@@ -58,7 +58,7 @@ export default function About() {
               <MaskLines as="h2" className="display-lg" lines={["From steel windows", "to certified", "fire doors."]} accent={[2]} delay={0} />
             </div>
             <Reveal delay={0.1}>
-              <p className="lead">Steeltech Industries began in 1995 manufacturing flash butt welded steel windows, roof trusses, and building accessories to IS 1038 / IS 1361 standards.</p>
+              <p className="lead">SteelTech Industries began in 1995 manufacturing flash butt welded steel windows, roof trusses, and building accessories to IS 1038 / IS 1361 standards.</p>
               <p className="body-copy" style={{ margin: "24px 0 32px" }}>
                 In 2005 we expanded into pressed steel flush doors, and over the following decade grew into a dedicated 2hrs. fire-rated door specialist, integrating global
                 testing standards into local manufacturing. Today, as part of the Royal Fab Group, we supply and install 2hrs. fire-rated steel doors, scientific steel doors,
@@ -122,7 +122,7 @@ export default function About() {
       <section className="section white">
         <div className="container split">
           <ClipReveal className="split-media">
-            <img src="/images/factory/paintbooth.jpg" alt="Steeltech paint booth finishing a steel door leaf" loading="lazy" />
+            <img src="/images/factory/paintbooth.jpg" alt="SteelTech paint booth finishing a steel door leaf" loading="lazy" />
             <span className="media-tag">Paint booth / Finishing</span>
           </ClipReveal>
           <div className="split-copy">

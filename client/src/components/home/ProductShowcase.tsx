@@ -130,7 +130,7 @@ export default function ProductShowcase() {
                 <h3>{p.name}</h3>
                 <p>{p.short}</p>
                 <span className="p-cta">
-                  View system
+                  View {p.name}
                   <span className="arrow">
                     <ArrowUpRight size={16} />
                   </span>

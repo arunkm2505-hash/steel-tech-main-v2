@@ -28,8 +28,8 @@ export default function Installation() {
       <section className="section">
         <div className="container split">
           <ClipReveal className="split-media">
-            {/* Photo removed pending replacement image from Steeltech. */}
-            <SiteImage alt="Steeltech installation" icon={Factory} label="Photo coming soon" />
+            {/* Photo removed pending replacement image from SteelTech. */}
+            <SiteImage alt="SteelTech installation" icon={Factory} label="Photo coming soon" />
           </ClipReveal>
           <div className="split-copy">
             <Reveal>

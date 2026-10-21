@@ -18,7 +18,6 @@ export default function ProductDetail() {
 
   const Icon = productIcons[product.icon];
   const siblings = products.filter((p) => p.slug !== product.slug);
-
   return (
     <Layout>
       <PageHero index={product.no} section={product.name} parent={{ label: "Products", href: "/products" }} eyebrow={product.tag} title={product.name} lead={product.intro} />
@@ -54,7 +53,7 @@ export default function ProductDetail() {
             <Reveal className="detail-block" delay={0.1}>
               <p className="eyebrow">Next step</p>
               <p className="body-copy" style={{ marginBottom: 24 }}>
-                Share your opening sizes, quantities and site location, and we will come back with a specification and quote.
+                Share your opening sizes, quantities and site location, and we will come back with a specification and quote. Ask us for current datasheets and any applicable test certificates for the selected configuration.
               </p>
               <Link className="btn btn-red" href="/contact">
                 Enquire about this system
@@ -84,7 +83,7 @@ export default function ProductDetail() {
                     <span className="p-tag">{sibling.tag}</span>
                     <h3>{sibling.name}</h3>
                     <span className="p-cta">
-                      View system
+                      View {sibling.name}
                       <span className="arrow">
                         <ArrowUpRight size={16} />
                       </span>
@@ -97,7 +96,15 @@ export default function ProductDetail() {
         </div>
       </section>
 
-      <CTASection />
+      <CTASection
+        title={
+          <>
+            Let's plan
+            <br />
+            <span>your opening.</span>
+          </>
+        }
+      />
     </Layout>
   );
 }

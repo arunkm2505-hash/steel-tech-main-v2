@@ -33,7 +33,7 @@ export default function Home() {
             <Reveal delay={0.1}>
               <p className="lead">We manufacture and install steel door systems for homes, businesses, and critical environments across South India.</p>
               <p className="body-copy" style={{ marginTop: 24 }}>
-                From fire-rated assemblies and scientific doors to fully glass steel doors and general-purpose access, Steeltech brings dependable materials and considered
+                From fire-rated assemblies and scientific doors to aluminium-framed glazed systems and general-purpose access, SteelTech brings dependable materials and considered
                 detailing to every opening.
               </p>
               <Link className="text-link" href="/about">
@@ -51,7 +51,7 @@ export default function Home() {
         <div className="container">
           <WordReveal text="Every opening is a promise. We build steel doors that keep it, through fire, weather and decades of daily use." redWords={["promise", "keep"]} />
           <Reveal className="tagline-meta">
-            <span>Steeltech Industries / Chennai</span>
+            <span>SteelTech Industries / Chennai</span>
             <span>A Royal Fab Group venture</span>
           </Reveal>
         </div>

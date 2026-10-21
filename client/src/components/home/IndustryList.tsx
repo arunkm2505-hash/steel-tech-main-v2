@@ -10,7 +10,7 @@ const industries = [
   { name: "Fire exits & stairwells", door: "Fire Rated Steel Doors", img: "/images/hero-doors/door-fire-exit-red.jpg", href: "/products/fire-rated-doors" },
   { name: "Server & electrical rooms", door: "Fire Rated Steel Doors", img: "/images/hero-doors/door-server-room.jpg", href: "/products/fire-rated-doors" },
   { name: "Offices & institutions", door: "General Purpose Steel Doors", img: "/images/hero-doors/door-staffroom-granite.jpg", href: "/products/general-purpose-doors" },
-  { name: "Lobbies & showrooms", door: "Fully Glass Steel Doors", img: "/images/products/aluminium-glass-doors.jpg", href: "/products/aluminium-glass-doors" },
+  { name: "Lobbies & showrooms", door: "Aluminium-Framed Glazed Doors", img: "/images/products/aluminium-glass-doors.jpg", href: "/products/aluminium-glass-doors" },
 ];
 
 /** Editorial list of sectors. On desktop a photo card trails the cursor on a spring and swaps to the hovered row. */

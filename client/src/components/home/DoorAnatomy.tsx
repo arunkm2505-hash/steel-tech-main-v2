@@ -16,7 +16,7 @@ const layers = [
   { name: "Intumescent seal", note: "Expands under heat to block smoke" },
   { name: "Front skin, PU finish", note: "Acrylic aliphatic PU in RAL colours" },
   { name: "Fire rated vision panel", note: "Glazing rated with the leaf" },
-  { name: "Certified hardware", note: "Dorma, Geze and Yale fittings" },
+  { name: "Hardware options", note: "Selected for the tested door configuration" },
 ];
 
 function LayerShape({ i }: { i: number }) {
@@ -106,7 +106,7 @@ export default function DoorAnatomy() {
         </button>
       </div>
 
-      <svg className="anatomy-svg" viewBox="0 0 520 560" role="img" aria-label="Exploded axonometric drawing of a Steeltech fire rated steel door, showing seven layers">
+      <svg className="anatomy-svg" viewBox="0 0 520 560" role="img" aria-label="Exploded axonometric drawing of a SteelTech fire-rated steel door, showing seven layers">
         <defs>
           <pattern id="an-core" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
             <rect width="10" height="10" fill="#efe6d6" />

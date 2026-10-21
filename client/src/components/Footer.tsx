@@ -7,8 +7,8 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-top">
         <div className="footer-brand">
-          <img src="/images/logo-transparent.png" alt="Steeltech Industries" className="footer-logo" loading="lazy" width={275} height={72} />
-          <p>Fire rated, scientific, general purpose and fully glass steel doors, manufactured and installed across South India since 1995. A Royal Fab Group venture.</p>
+          <img src="/images/logo-transparent.png" alt="SteelTech Industries" className="footer-logo" loading="lazy" width={275} height={72} />
+          <p>Fire-rated, scientific, general-purpose and aluminium-framed glazed door systems, manufactured and installed across South India since 1995. A Royal Fab Group venture.</p>
           <Link className="btn btn-red btn-sm" href="/contact">
             Start a project
             <span className="btn-icon">
@@ -46,10 +46,10 @@ export default function Footer() {
         </div>
       </div>
       <p className="footer-wordmark" aria-hidden="true">
-        Steel<span>tech</span>
+        Steel<span>Tech</span>
       </p>
       <div className="container footer-bottom">
-        <span>© {new Date().getFullYear()} Steeltech Industries</span>
+        <span>© {new Date().getFullYear()} SteelTech Industries</span>
         <span>Engineered access since 1995</span>
         <a href="#top">
           Back to top <ArrowUp size={14} />

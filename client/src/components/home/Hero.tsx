@@ -26,9 +26,9 @@ const systems = [
     slug: "fire-rated-doors",
     name: "Fire rated",
     img: "/images/products/fire-rated-doors.jpg",
-    alt: "Red Steeltech fire rated double steel door installed in a corridor",
+    alt: "Red SteelTech fire-rated double steel door installed in a corridor",
     thumb: "/images/hero-doors/door-fire-exit-red.jpg",
-    spec: { label: "Fire rating", value: "120", unit: "min", note: "IS 3614 Part II and BS 476 part 20 and 22" },
+    spec: { label: "Fire rating", value: "Up to 120", unit: "min", note: "Confirm rating against the tested door configuration" },
   },
   {
     slug: "scientific-doors",
@@ -36,7 +36,7 @@ const systems = [
     img: "/images/products/scientific-doors.jpg",
     alt: "Stainless steel scientific double doors with vision panels",
     thumb: "/images/hero-doors/door-cleanroom-sliding.jpg",
-    spec: { label: "Surface", value: "Seamless", unit: "", note: "Air tight gasketing for pressure controlled rooms" },
+    spec: { label: "Surface", value: "Seamless", unit: "", note: "Sealed gasketing; performance to be confirmed" },
   },
   {
     slug: "general-purpose-doors",
@@ -48,11 +48,11 @@ const systems = [
   },
   {
     slug: "aluminium-glass-doors",
-    name: "Fully glass",
+    name: "Glazed",
     img: "/images/products/aluminium-glass-doors.jpg",
-    alt: "Fully glass steel double doors at an office entrance",
+    alt: "Aluminium-framed glazed double doors at an office entrance",
     thumb: "/images/hero-doors/door-staffroom-granite.jpg",
-    spec: { label: "Glazing", value: "Toughened", unit: "", note: "Toughened or laminated safety glass to IS standards" },
+    spec: { label: "Glazing", value: "Safety glass", unit: "", note: "Toughened or laminated; confirm standard and thickness" },
   },
 ];
 
@@ -157,7 +157,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.9, delay: 0.35, ease: EASE }}
           >
-            2 hour fire rated, scientific, general purpose and fully glass steel doors, manufactured in house and installed by our own teams across South India.
+            2-hour fire-rated, scientific, general-purpose and aluminium-framed glazed doors, manufactured and installed across South India.
           </motion.p>
           <motion.div className="hero-actions" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5, ease: EASE }}>
             <Magnetic>

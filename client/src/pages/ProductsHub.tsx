@@ -14,17 +14,17 @@ export default function ProductsHub() {
   return (
     <Layout>
       <PageHero
-        index="02"
+        index="04"
         section="Products"
-        eyebrow="Four door systems, one manufacturer"
+        eyebrow="04 door systems · one manufacturer"
         title={
           <>
-            Doors for the
+            Steel door systems
             <br />
-            <span>real world.</span>
+            <span>for every opening.</span>
           </>
         }
-        lead="Every opening is different. Choose the system built for yours, from certified fire protection to light-filled fully glass steel doors."
+        lead="Compare fire-rated, scientific, general-purpose and aluminium-framed glazed door systems, then enquire about the configuration your project needs."
       />
 
       <section className="section">
@@ -44,7 +44,7 @@ export default function ProductsHub() {
                       <h3>{product.name}</h3>
                       <p>{product.short}</p>
                       <span className="p-cta">
-                        View system
+                        View {product.name}
                         <span className="arrow">
                           <ArrowUpRight size={16} />
                         </span>

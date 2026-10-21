@@ -40,8 +40,8 @@ export default function Header() {
     <>
       <header className={`site-header${hidden ? " is-hidden" : ""}`}>
         <div className="header-bar">
-          <Link href="/" className="brand" aria-label="Steeltech Industries home">
-            <img src="/images/logo-transparent.png" alt="Steeltech Industries" className="brand-logo" width={176} height={46} />
+          <Link href="/" className="brand" aria-label="SteelTech Industries home">
+            <img src="/images/logo-transparent.png" alt="SteelTech Industries" className="brand-logo" width={176} height={46} />
           </Link>
 
           <nav className="desktop-nav" aria-label="Primary">

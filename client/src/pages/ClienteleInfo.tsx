@@ -48,7 +48,7 @@ const pages: Record<
         <span>we get involved.</span>
       </>
     ),
-    lead: "Every project gets one of three levels of Steeltech involvement, chosen to match how your own team is set up.",
+    lead: "Every project gets one of three levels of SteelTech involvement, chosen to match how your own team is set up.",
     cards: serviceOfferings,
   },
   assurance: {

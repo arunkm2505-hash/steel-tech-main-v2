@@ -52,7 +52,7 @@ export default function Clientele() {
               <MaskLines as="h2" className="display-lg" lines={["Every client,", "at a glance."]} accent={[1]} delay={0} />
             </div>
             <Reveal delay={0.1}>
-              <p className="body-copy">Hospitals, automotive plants, research institutions, utilities and developers who rely on Steeltech openings every day.</p>
+              <p className="body-copy">Hospitals, automotive plants, research institutions, utilities and developers who rely on SteelTech openings every day.</p>
             </Reveal>
           </div>
           <RevealStagger className="logo-wall" stagger={0.02}>

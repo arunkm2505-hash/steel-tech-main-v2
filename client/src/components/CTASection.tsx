@@ -9,9 +9,9 @@ export default function CTASection({
   eyebrow = "Have an opening in mind?",
   title = (
     <>
-      Let's make
+      Let's plan
       <br />
-      <span>it stronger.</span>
+      <span>your opening.</span>
     </>
   ),
   lead = "Tell us what you are building, replacing, or protecting. We will help you get to the right door system without the guesswork.",

@@ -6,16 +6,17 @@ export const products = [
   {
     slug: "fire-rated-doors",
     no: "01",
-    name: "Fire Rated Steel Doors",
-    tag: "Protection systems",
-    short: "Up to 2-hour rated steel assemblies engineered for commercial, industrial, institutional, and hospitality spaces.",
-    intro: "Our fire-rated steel doors are engineered to contain flame, smoke, and heat for a certified duration, buying critical time for evacuation and emergency response without giving up daily usability.",
+    name: "Fire-Rated Steel Doors",
+    tag: "60–120 min · configuration-specific",
+    short: "Fire-resistance ratings from 60 to 120 minutes, subject to the tested door configuration.",
+    intro: "SteelTech fire-rated steel doors are designed to help contain fire and smoke. The certified rating depends on the complete tested assembly, including the leaf, frame, glazing and hardware.",
     features: [
-      "Tested to IS 3614 Part II-1992 and BS 476 part 20 and 22, rated 60 to 120 minutes",
+      "Test standards: IS 3614 (Part 2): 1992 and BS 476 Parts 20 and 22",
+      "Fire-resistance ratings from 60 to 120 minutes; verify the rating for the selected assembly",
       "Intumescent seals that expand under heat to block smoke",
-      "Self-closing hardware compatible with Dorma, Geze & Yale fittings",
-      "Vision panels available in fire-rated glass",
-      "Acrylic Aliphatic PU Paint finish, having UV resistance & salt spray resistance in standard and custom RAL colours",
+      "Self-closing hardware options; confirm fire-rating compatibility for the selected assembly",
+      "Fire-rated vision glazing options; permitted size and rating depend on the tested configuration",
+      "Aliphatic acrylic PU paint finish with UV and salt-spray resistance; test duration to be confirmed",
     ],
     applications: ["Stairwells and escape corridors", "Server rooms and electrical risers", "Hotels and hospitality kitchens", "Factories and warehouses", "Hospitals and institutional buildings"],
     icon: "flame",
@@ -26,16 +27,15 @@ export const products = [
     slug: "scientific-doors",
     no: "02",
     name: "Scientific Steel Doors",
-    tag: "Controlled environments",
-    short: "Purpose-built access for labs, hospitals, clean rooms, and facilities where every detail matters.",
-    intro: "Scientific doors are built for spaces where contamination control, pressure differentials, and hygiene are non-negotiable: laboratories, clean rooms, operation theatres, and pharmaceutical facilities.",
+    tag: "Labs · hospitals · clean rooms",
+    short: "Purpose-built access for laboratories, hospitals, clean rooms and other controlled environments.",
+    intro: "SteelTech scientific doors are designed for hygiene-sensitive environments such as laboratories, clean rooms, operating theatres and pharmaceutical facilities. Materials, seals and hardware can be specified for the project.",
     features: [
       "Seamless, crevice-free surfaces for easy sanitisation",
-      "Air-tight gasketing for pressure-controlled rooms",
-      "Acrylic Aliphatic PU Paint finish",
-      "Radiation-shielded variants for imaging and lab rooms",
-      "Compatible with automatic sliding and sensor hardware",
-      "Chemical and corrosion-resistant finishes",
+      "Sealed gasketing for controlled environments; performance figures to be confirmed",
+      "Stainless steel or PU-painted steel options; material grade and finish to be confirmed",
+      "Lead-lined variants available; lead equivalence is project-specific",
+      "Automatic sliding and sensor hardware options",
     ],
     applications: ["Hospital operation theatres", "Pharmaceutical clean rooms", "Research laboratories", "Imaging and radiology suites", "Food processing facilities"],
     icon: "flask-conical",
@@ -46,15 +46,14 @@ export const products = [
     slug: "general-purpose-doors",
     no: "03",
     name: "General Purpose Steel Doors",
-    tag: "Everyday strength",
+    tag: "35+ design options",
     short: "Durable steel door solutions for homes, utility zones, offices, and high-traffic applications.",
-    intro: "Our general-purpose steel doors bring the same engineering discipline as our specialist ranges to everyday openings: homes, offices, utility rooms, and high-footfall commercial spaces.",
+    intro: "SteelTech general-purpose doors bring durable steel construction to residential, commercial and utility openings, with a choice of designs and project-specific sizes.",
     features: [
       "35+ design and panelling options",
-      "Standard and custom sizes to fit any opening",
-      "Termite-proof and warp-resistant by material",
-      "1-year manufacturer warranty and life time service support",
-      "Optional insulated core for acoustic and thermal comfort",
+      "Steel construction: termite-proof and will not warp",
+      "Standard and custom sizes; confirm opening dimensions during specification",
+      "Optional insulated core; core type and acoustic or thermal performance to be confirmed",
     ],
     applications: ["Residential entrances and utility doors", "Office and retail entries", "Warehouses and back-of-house areas", "Educational institutions", "Multi-family residential blocks"],
     icon: "door-closed",
@@ -64,21 +63,20 @@ export const products = [
   {
     slug: "aluminium-glass-doors",
     no: "04",
-    name: "Fully Glass Steel Doors",
-    tag: "Architectural openings",
-    short: "Slim-profile steel framing paired with toughened glass for a light, modern façade.",
-    intro: "For openings where visibility, daylight, and a contemporary façade matter as much as security, our fully glass steel door systems combine slim structural steel framing with toughened or laminated glass.",
+    name: "Aluminium-Framed Glazed Doors",
+    tag: "Glazed door systems",
+    short: "Slim aluminium framing and safety-glass options for bright, contemporary entrances.",
+    intro: "SteelTech glazed door systems use slim aluminium framing with toughened or laminated safety-glass options to bring daylight and visibility to entrances. Glass specification and frame configuration are confirmed for each project.",
     features: [
-      "Toughened / laminated safety glass to IS standards",
-      "Sliding, swing, and partition configurations",
-      "Thermal-break profiles for energy efficiency",
-      "Frameless and semi-frameless options",
-      "Integrates with automatic door hardware",
+      "Toughened or laminated safety-glass options; confirm the applicable standard and glass thickness",
+      "Sliding and swing door configurations",
+      "Aluminium-framed system; profile and finish to be confirmed",
+      "Automatic door hardware options",
     ],
-    applications: ["Corporate lobbies and reception areas", "Retail storefronts", "Conference and partition walls", "Balconies and facades", "Showrooms"],
+    applications: ["Corporate lobbies and reception areas", "Retail entrances", "Showrooms", "Office entrances"],
     icon: "square-stack",
     image: "/images/products/aluminium-glass-doors.jpg",
-    imageAlt: "Fully glass steel-framed double door entrance with side panels and pull handles",
+    imageAlt: "Aluminium-framed glazed entrance with side panels and pull handles",
   },
 ] as const;
 
@@ -91,7 +89,7 @@ export const benefits = [
   { no: "06", title: "Eco-friendly manufacturing", desc: "No trees are cut. Every door is built from engineered steel and recyclable components." },
   { no: "07", title: "7x more warp-resistant", desc: "Steel holds its shape through heat, humidity, and years of daily use without warping." },
   { no: "08", title: "Weatherproof construction", desc: "Built to perform in coastal humidity, monsoon exposure, and daily temperature swings." },
-  { no: "09", title: "1 Year Warranty", desc: "Every door ships with a 1-year manufacturer warranty and life time service support." },
+  { no: "09", title: "1 Year Warranty", desc: "Every door ships with a 1-year manufacturer warranty and lifetime service support." },
   { no: "10", title: "Maintenance-free", desc: "No repainting, resealing, or seasonal upkeep. Wipe-clean surfaces stay presentable for years." },
   { no: "11", title: "Value engineered", desc: "Lower lifetime cost than timber once you account for replacement, repair, and treatment." },
 ] as const;
@@ -104,26 +102,26 @@ export const stats = [
 ] as const;
 
 export const timeline = [
-  { year: "1995", title: "Steeltech Industries founded", desc: "Began manufacturing flash butt welded steel windows, roof trusses, and building accessories to IS 1038 / IS 1361 standards." },
+  { year: "1995", title: "SteelTech Industries founded", desc: "Began manufacturing flash butt welded steel windows, roof trusses, and building accessories to IS 1038 / IS 1361 standards." },
   { year: "2005", title: "Expansion into flush doors", desc: "Widened the product range into pressed steel flush doors, bringing the same engineering discipline to a new category." },
   { year: "2010s", title: "Fire-rated specialisation", desc: "Became a dedicated fire-rated door provider, integrating global testing standards into local manufacturing." },
   { year: "Today", title: "Royal Fab Group venture", desc: "Operating as part of the Royal Fab Group, serving commercial, institutional, and residential clients across South India." },
 ] as const;
 
 export const productRange = [
-  "Fire Rated Steel Doors",
+  "Fire-Rated Steel Doors",
   "Scientific Steel Doors",
   "General Purpose Steel Doors",
-  "Fully Glass Steel Doors",
-  "Lead Line Steel Doors",
+  "Aluminium-Framed Glazed Doors",
+  "Lead Lined Steel Doors",
   "Stainless Steel Doors",
   "Floor Spring & Double Action Hinged Doors",
   "Pressed Steel Door Frames",
-  "Pressed Steel Louver Ventilators",
-  "Double Glassed Vision Panel",
+  "Pressed Steel Louvre Ventilators",
+  "Double Glazed Vision Panels",
 ] as const;
 
-export const hardwarePartners = ["Dorma", "Geze", "Yale"] as const;
+export const hardwarePartners = ["dormakaba", "Geze", "Yale"] as const;
 
 export const accessories = [
   { name: "Door Closers", desc: "Hydraulic and cam-action and hold open closers for controlled, self-closing operation on every door category." },
@@ -136,9 +134,9 @@ export const accessories = [
 
 export const certifications = [
   { title: "IS 1038 / IS 1361", desc: "Steel window and door manufacturing standards followed since the company's founding." },
-  { title: "IS 3614 Part II / BS 476", desc: "Fire doors are tested to IS 3614 Part II-1992 and BS 476 part 20 and 22, rated 60 to 120 minutes for stability and integrity." },
-  { title: "Hardware Compliance", desc: "Only certified hardware from Dorma, Geze and Yale is specified on rated assemblies." },
-  { title: "1 Year Warranty", desc: "Every installation is backed by a 1-year manufacturer warranty and life time service support." },
+  { title: "IS 3614 (Part 2): 1992 / BS 476", desc: "Fire doors are tested to IS 3614 (Part 2): 1992 and BS 476 Parts 20 and 22, with configuration-specific ratings from 60 to 120 minutes." },
+  { title: "Hardware Compliance", desc: "Hardware for rated assemblies is selected to match the tested door configuration." },
+  { title: "1 Year Warranty", desc: "Every installation is backed by a 1-year manufacturer warranty and lifetime service support." },
 ] as const;
 
 export const qualityPolicy = [
@@ -152,17 +150,17 @@ export const qualityPolicy = [
 export const serviceOfferings = [
   { title: "Installation Service", desc: "We install every door ourselves. A precise installation protects the door's performance and keeps the whole opening working the way it was designed." },
   { title: "Installation Supervision", desc: "If your own technicians are handling installation, our engineer can supervise the work on site and guide your team through it." },
-  { title: "After Sales Service", desc: "Once installation is certified by a Steeltech engineer, the standard one-year installation warranty applies, and our team stays reachable for spares and adjustments." },
+  { title: "After Sales Service", desc: "Once installation is certified by a SteelTech engineer, the standard one-year installation warranty applies, and our team stays reachable for spares and adjustments." },
 ] as const;
 
 export const assurance = [
-  { title: "1-year manufacturer warranty", desc: "Every door we manufacture is backed by a 1-year manufacturer warranty and life time service support." },
-  { title: "1-year installation warranty", desc: "When installation is supervised and certified by a Steeltech engineer, the installation itself is covered for one year." },
+  { title: "1-year manufacturer warranty", desc: "Every door we manufacture is backed by a 1-year manufacturer warranty and lifetime service support." },
+  { title: "1-year installation warranty", desc: "When installation is supervised and certified by a SteelTech engineer, the installation itself is covered for one year." },
   { title: "ISO 9001:2008 aligned", desc: "Our quality management system follows the International series ISO 9001:2008." },
   { title: "Engineers on call", desc: "A dedicated point of contact for spares, adjustments, and after-sales support for the life of the installation." },
 ] as const;
 
-export const serviceGeography = ["Chennai", "Coimbatore", "Madurai", "Trichy", "Bangalore", "Mysore", "Trivandrum", "Cochin", "Hyderabad", "Visakhapatnam", "Pondicherry"] as const;
+export const serviceGeography = ["Chennai", "Coimbatore", "Madurai", "Trichy", "Bangalore", "Mysore", "Trivandrum", "Cochin", "Hyderabad", "Visakhapatnam", "Puducherry"] as const;
 
 export const installationSteps = [
   { no: "01", title: "Site survey", desc: "Our team visits the site to measure openings, assess structural constraints, and understand the application." },
@@ -227,7 +225,7 @@ export const contact = {
   phone: "+91 99429 02025",
   phoneHref: "tel:+919942902025",
   email: "dravidamani@steeltech-ind.com",
-  locations: ["Chennai, Tamil Nadu", "Pondicherry"],
+  locations: ["Chennai, Tamil Nadu", "Puducherry"],
 } as const;
 
 export const navItems: NavItem[] = [

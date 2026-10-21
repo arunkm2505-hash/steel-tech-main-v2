@@ -74,7 +74,7 @@ export default function Accessories() {
             <MaskLines as="h2" className="display-md" lines={["Hardware that", "holds its rating."]} accent={[1]} delay={0} />
             <Reveal delay={0.1}>
               <p className="body-copy">
-                We only specify hardware from manufacturers whose testing and certification hold up on rated assemblies: Dorma, Geze and Yale, so the door performs exactly as
+                We specify hardware to match each tested door assembly, so the door performs as
                 designed for the life of the installation.
               </p>
               <Link className="btn" href="/contact">

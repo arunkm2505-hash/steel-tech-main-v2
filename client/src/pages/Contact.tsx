@@ -101,7 +101,7 @@ export default function Contact() {
                 <textarea
                   id="f-message"
                   rows={5}
-                  placeholder="For example: 14 fire rated doors for a hospital block in Chennai, 2 hour rating"
+                  placeholder="For example: 14 fire-rated doors for a hospital block in Chennai, 2-hour rating"
                   aria-invalid={!!errors.message}
                   {...register("message")}
                 />

@@ -42,9 +42,9 @@ function BentoCard({ className = "", children, onHoverChange }: { className?: st
   );
 }
 
-/* ---------- A. Fire resistant: photo breaks out of the top, hover runs a 120 minute test dial ---------- */
+/* ---------- A. Fire resistant: photo breaks out of the top, hover animates an illustrative rating scale ---------- */
 function FireCard() {
-  // Rests at the full 120 minute rating; hovering or tapping replays the test from zero.
+  // The dial is a visual scale only; it does not represent a door test.
   const [mins, setMins] = useState(120);
   const run = (v: boolean) => {
     if (!v) return;
@@ -56,7 +56,7 @@ function FireCard() {
       <div className="b-fire-photo">
         <img src="/images/hero-doors/door-fire-exit-grey-crop.jpg" alt="Grey fire exit double steel doors with push bars" loading="lazy" />
       </div>
-      <button className="b-dial" onClick={() => run(true)} aria-label="Replay the 120 minute fire test">
+      <button className="b-dial" onClick={() => run(true)} aria-label="Animate the illustrative fire-resistance rating scale">
         <svg viewBox="0 0 80 80" aria-hidden="true">
           <circle cx="40" cy="40" r="34" className="track" />
           <circle cx="40" cy="40" r="34" className="fill" style={{ strokeDasharray: C, strokeDashoffset: C * (1 - mins / 120) }} />
@@ -69,13 +69,13 @@ function FireCard() {
       <div className="b-body">
         <span className="b-no">04 / Fire resistant by material</span>
         <h3>Steel is the foundation of our certified range.</h3>
-        <p>{mins < 120 ? `Test running: ${mins} of 120 minutes, integrity holding.` : "Stability and integrity held for the full 120 minutes. Tap the dial to replay."}</p>
+        <p>Illustrative rating scale only. Available fire-resistance ratings and tested configurations must be confirmed against current test documents.</p>
       </div>
     </BentoCard>
   );
 }
 
-/* ---------- B. 2HR rating: overflowing standards seal, slider follows the ISO 834 furnace curve ---------- */
+/* ---------- B. Fire-rating range: reference curve and standards, not a product-test simulation ---------- */
 function RatingCard() {
   const [t, setT] = useState(60);
   const temp = Math.round(20 + 345 * Math.log10(8 * t + 1));
@@ -87,35 +87,32 @@ function RatingCard() {
             <path id="seal-path" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
           </defs>
           <text>
-            <textPath href="#seal-path">IS 3614 PART II · BS 476 PART 20 & 22 · </textPath>
+            <textPath href="#seal-path">IS 3614 (PART 2) · BS 476 PARTS 20 & 22 · </textPath>
           </text>
         </svg>
         <b>2H</b>
       </div>
-      <span className="b-no">Certified fire protection</span>
+      <span className="b-no">Fire-resistance ratings</span>
       <div className="b-rating-grid">
         <div className="b-big">2HR</div>
         <div className="b-sim">
-          <label htmlFor="fire-t">Fire exposure</label>
+          <label htmlFor="fire-t">Illustrative ISO 834 exposure scale</label>
           <div className="b-sim-read">
             <strong>{t} min</strong>
             <span>Furnace at {temp}°C</span>
           </div>
           <input id="fire-t" type="range" min={0} max={120} step={5} value={t} onChange={(e) => setT(Number(e.target.value))} style={{ ["--p" as string]: `${(t / 120) * 100}%` }} />
           <ul>
-            <li className="ok">
-              <Check size={14} /> Stability
+            <li>
+              <Check size={14} /> Standards: IS 3614 (Part 2): 1992; BS 476 Parts 20 and 22
             </li>
-            <li className="ok">
-              <Check size={14} /> Integrity
-            </li>
-            <li className="ok">
-              <Check size={14} /> Smoke sealed
+            <li>
+              <Check size={14} /> Laboratory and tested configuration: confirm from current test documents
             </li>
           </ul>
         </div>
       </div>
-      <p>Tested to IS 3614 Part II-1992 and BS 476 part 20 and 22, rated 60 to 120 minutes. Drag to follow the standard time temperature curve.</p>
+      <p>Ratings from 60 to 120 minutes are configuration-specific. This illustration is not a test result; request current documents for the selected assembly.</p>
     </BentoCard>
   );
 }
@@ -271,7 +268,7 @@ const styles: { v: Variant; name: string }[] = [
   { v: "louvre", name: "Louvred" },
   { v: "double", name: "Double leaf" },
   { v: "panels", name: "Moulded panel" },
-  { v: "glass", name: "Fully glass" },
+  { v: "glass", name: "Glazed doors" },
   { v: "flush", name: "Flush" },
 ];
 function DoorGlyph({ v }: { v: Variant }) {

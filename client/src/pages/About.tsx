@@ -90,9 +90,9 @@ export default function About() {
           </div>
           <RevealStagger as="ul" className="range-list" stagger={0.04}>
             {productRange.map((item, i) => (
-              <motion.li variants={staggerItem} key={item}>
+              <motion.li variants={staggerItem} key={item.name}>
                 <i>{String(i + 1).padStart(2, "0")}</i>
-                {item}
+                {item.name}
               </motion.li>
             ))}
           </RevealStagger>

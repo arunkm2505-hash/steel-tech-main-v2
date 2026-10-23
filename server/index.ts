@@ -13,8 +13,8 @@ async function startServer() {
   app.use(express.json());
 
   app.post("/api/contact", (req, res) => {
-    const { name, contactInfo, message } = req.body ?? {};
-    console.log("New contact enquiry:", { name, contactInfo, message });
+    const { name, contactInfo, product, openingSizes, quantity, message } = req.body ?? {};
+    console.log("New contact enquiry:", { name, contactInfo, product, openingSizes, quantity, message });
     res.json({ success: true });
   });
 

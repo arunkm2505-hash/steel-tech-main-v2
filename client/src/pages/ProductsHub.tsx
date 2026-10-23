@@ -34,23 +34,32 @@ export default function ProductsHub() {
               const Icon = productIcons[product.icon];
               return (
                 <motion.div variants={staggerItem} key={product.slug}>
-                  <Link href={`/products/${product.slug}`} className="product-card" aria-label={`View ${product.name}`}>
-                    <div className="product-card-media">
-                      <SiteImage src={product.image} alt={product.imageAlt} label={product.tag} icon={Icon} />
-                      <span className="p-no">{product.no}</span>
-                    </div>
-                    <div className="product-card-body">
-                      <span className="p-tag">{product.tag}</span>
-                      <h3>{product.name}</h3>
-                      <p>{product.short}</p>
-                      <span className="p-cta">
-                        View {product.name}
-                        <span className="arrow">
-                          <ArrowUpRight size={16} />
+                  <article className="product-card">
+                    <Link href={`/products/${product.slug}`} className="product-card-main">
+                      <div className="product-card-media">
+                        <SiteImage src={product.image} alt={product.imageAlt} label={product.tag} icon={Icon} />
+                        <span className="p-no">{product.no}</span>
+                      </div>
+                      <div className="product-card-body">
+                        <span className="p-tag">{product.tag}</span>
+                        <h2>{product.name}</h2>
+                        <p>{product.short}</p>
+                        <ul className="product-facts">
+                          {product.cardFacts.map((fact) => <li key={fact}>{fact}</li>)}
+                        </ul>
+                        <span className="p-cta">
+                          View {product.name}
+                          <span className="arrow">
+                            <ArrowUpRight size={16} />
+                          </span>
                         </span>
-                      </span>
-                    </div>
-                  </Link>
+                      </div>
+                    </Link>
+                    <Link className="product-quote" href={`/contact?product=${encodeURIComponent(product.name)}`}>
+                      Get a quote for {product.name}
+                      <ArrowUpRight size={16} aria-hidden="true" />
+                    </Link>
+                  </article>
                 </motion.div>
               );
             })}
@@ -73,9 +82,15 @@ export default function ProductsHub() {
           </div>
           <RevealStagger as="ul" className="range-list" stagger={0.04}>
             {productRange.map((item, i) => (
-              <motion.li variants={staggerItem} key={item}>
-                <i>{String(i + 1).padStart(2, "0")}</i>
-                {item}
+              <motion.li variants={staggerItem} key={item.name}>
+                <Link href={item.href}>
+                  <i>{String(i + 1).padStart(2, "0")}</i>
+                  <span>
+                    <b>{item.name}</b>
+                    <small>{item.desc}</small>
+                  </span>
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                </Link>
               </motion.li>
             ))}
           </RevealStagger>

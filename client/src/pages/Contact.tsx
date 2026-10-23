@@ -1,21 +1,25 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowUpRight, CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { contact, products } from "@/data/site";
+import { contact, productRange, products } from "@/data/site";
 
 const schema = z.object({
   name: z.string().min(2, "Please enter your name"),
   contactInfo: z.string().min(5, "Please share an email or phone number"),
+  product: z.string().optional(),
+  openingSizes: z.string().optional(),
+  quantity: z.string().optional(),
   message: z.string().min(10, "Tell us a little more about the project"),
 });
 
 type FormValues = z.infer<typeof schema>;
+const productOptions: string[] = [...products.map((product) => product.name), ...productRange.slice(4).map((product) => product.name)];
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -23,22 +27,33 @@ export default function Contact() {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({ resolver: zodResolver(schema) });
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const requestedProduct = params.get("product") ?? "";
+    if (productOptions.includes(requestedProduct)) setValue("product", requestedProduct);
+    const request = params.get("request");
+    if (request === "documents") setValue("message", `Please send the latest ${requestedProduct} datasheet and any applicable test certificates.`);
+    if (request === "project-reference") setValue("message", `Please share a relevant project reference for ${requestedProduct}.`);
+  }, [setValue]);
+
   const onSubmit = async (values: FormValues) => {
     try {
-      await fetch("/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
+      if (!response.ok) throw new Error(`Enquiry request failed with status ${response.status}`);
+      toast.success("Enquiry submitted. We'll get back to you shortly.");
+      setSubmitted(true);
+      reset();
     } catch {
-      /* the enquiry still lands with the team via the confirmation shown below */
+      toast.error("We couldn't submit your enquiry. Please try again.");
     }
-    toast.success("Enquiry sent. We'll get back to you shortly.");
-    setSubmitted(true);
-    reset();
   };
 
   return (
@@ -95,6 +110,21 @@ export default function Contact() {
                 <label htmlFor="f-contact">Email or phone</label>
                 <input id="f-contact" autoComplete="email" placeholder="How should we reach you?" aria-invalid={!!errors.contactInfo} {...register("contactInfo")} />
                 {errors.contactInfo && <span className="field-error">{errors.contactInfo.message}</span>}
+              </div>
+              <div className="field">
+                <label htmlFor="f-product">Product or system</label>
+                <select id="f-product" {...register("product")}>
+                  <option value="">Choose a product (optional)</option>
+                  {productOptions.map((product) => <option value={product} key={product}>{product}</option>)}
+                </select>
+              </div>
+              <div className="field">
+                <label htmlFor="f-sizes">Opening sizes</label>
+                <input id="f-sizes" placeholder="Width × height, if known" {...register("openingSizes")} />
+              </div>
+              <div className="field">
+                <label htmlFor="f-quantity">Quantity</label>
+                <input id="f-quantity" inputMode="numeric" placeholder="Number of doors, if known" {...register("quantity")} />
               </div>
               <div className={`field${errors.message ? " has-error" : ""}`}>
                 <label htmlFor="f-message">What are you building?</label>

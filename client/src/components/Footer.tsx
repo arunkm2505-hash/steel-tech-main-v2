@@ -45,9 +45,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="footer-wordmark" aria-hidden="true">
-        Steel<span>Tech</span>
-      </p>
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} SteelTech Industries</span>
         <span>Engineered access since 1995</span>
@@ -59,8 +56,8 @@ export default function Footer() {
         <span>
           Designed and developed by <b>stat6</b> · Aarupadaiyar KJ
         </span>
-        <a href="https://www.instagram.com/theleveragegame/" target="_blank" rel="noopener noreferrer" aria-label="theleveragegame on Instagram (opens in a new tab)">
-          <Instagram size={14} /> @theleveragegame
+        <a href="https://www.instagram.com/theleveragegame/" target="_blank" rel="noopener noreferrer" aria-label="Developer Instagram: theleveragegame (opens in a new tab)">
+          <Instagram size={14} /> Developer Instagram: @theleveragegame
         </a>
       </div>
     </footer>
